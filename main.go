@@ -98,8 +98,8 @@ func pull(r *plugin.Repo, b *plugin.Build) *exec.Cmd {
 	return exec.Command(
 		"hg",
 		"pull",
-		"--branch",
-		b.Branch,
+		"-r",
+		b.Commit,
 		r.Clone,
 	)
 }
